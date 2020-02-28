@@ -1,25 +1,30 @@
 apply plugin: 'com.android.library'
 
+ext {
+    PUBLISH_GROUP_ID = 'com.github.glomadrian'
+    PUBLISH_ARTIFACT_ID = 'materialanimatedswitch'
+    PUBLISH_VERSION = '1.2'
+}
 android {
-  compileSdkVersion 22
-  buildToolsVersion "22.0.1"
+    compileSdkVersion 29
 
-  defaultConfig {
-    minSdkVersion 9
-    targetSdkVersion 22
-    versionCode 1
-    versionName "1.1"
-  }
-  buildTypes {
-    release {
-      minifyEnabled false
-      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.1"
     }
-  }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
 }
 
 dependencies {
-  compile fileTree(dir: 'libs', include: ['*.jar'])
-  compile 'com.android.support:appcompat-v7:22.2.0'
-  compile 'com.nineoldandroids:library:2.4.0'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
 }
+
+apply from: 'https://raw.githubusercontent.com/blundell/release-android-library/master/android-release-aar.gradle'

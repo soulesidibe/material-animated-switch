@@ -7,19 +7,19 @@ import java.util.Observable;
  */
 public class BallFinishObservable extends Observable {
 
-  private BallState state;
+    private BallState state;
 
-  public void setBallState(BallState state) {
-    this.state = state;
-    setChanged();
-    notifyObservers();
-  }
+    public void setBallState(BallState state) {
+        this.state = state;
+        setChanged();
+        notifyObservers();
+    }
 
-  public BallState getState() {
-    return state;
-  }
+    public BallState getState() {
+        return state;
+    }
 
-  public static enum BallState {
-    RELEASE, PRESS, MOVE
-  }
+    public static enum BallState {
+        RELEASE, PRESS, MOVE
+    }
 }

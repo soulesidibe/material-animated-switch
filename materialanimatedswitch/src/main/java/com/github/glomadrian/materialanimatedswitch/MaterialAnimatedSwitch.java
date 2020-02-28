@@ -198,6 +198,15 @@ public class MaterialAnimatedSwitch extends View {
         }
     }
 
+    public void setOnCheckedChangeListener(OnCheckedChangeListener onCheckedChangeListener) {
+        this.onCheckedChangeListener = onCheckedChangeListener;
+    }
+
+    public interface OnCheckedChangeListener {
+
+        void onCheckedChanged(boolean isChecked);
+    }
+
     /**
      * Avoid click when ball is still in movement
      * Call listener when state is updated
@@ -219,15 +228,6 @@ public class MaterialAnimatedSwitch extends View {
                 }
             }
         }
-    }
-
-    public void setOnCheckedChangeListener(OnCheckedChangeListener onCheckedChangeListener) {
-        this.onCheckedChangeListener = onCheckedChangeListener;
-    }
-
-    public interface OnCheckedChangeListener {
-
-        void onCheckedChanged(boolean isChecked);
     }
 
     private class CancelTask implements Runnable {

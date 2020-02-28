@@ -11,13 +11,13 @@ import android.graphics.Canvas;
 
 public interface Painter<T extends Enum> {
 
-  void draw(Canvas canvas);
+    void draw(Canvas canvas);
 
-  void setColor(int color);
+    int getColor();
 
-  int getColor();
+    void setColor(int color);
 
-  void onSizeChanged(int height, int width);
+    void onSizeChanged(int height, int width);
 
-  void setState(T state);
+    void setState(T state);
 }

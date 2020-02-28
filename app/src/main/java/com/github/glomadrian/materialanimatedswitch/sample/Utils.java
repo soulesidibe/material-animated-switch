@@ -13,7 +13,7 @@ public class Utils {
    */
   public static int dpToPx(float dp, Resources resources) {
     float px =
-        TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, resources.getDisplayMetrics());
+            TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, resources.getDisplayMetrics());
     return (int) px;
   }
 }
